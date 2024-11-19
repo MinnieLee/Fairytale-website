@@ -1,21 +1,17 @@
-document.querySelectorAll('.image-container').forEach(container => {
+const images = document.querySelectorAll('.image-container');
 
-    container.addEventListener('click', () => {
-        const link = container.getAttribute('data-link');
-        window.location.href = link;
+images.forEach((image) => {
+  image.addEventListener('mouseover', () => {
+    images.forEach((img) => {
+      if (img !== image) {
+        img.style.opacity = '0.2';
+      }
     });
+  });
 
-    container.addEventListener('mouseenter', () => {
-        document.querySelectorAll('.image-container').forEach(other => {
-            if (other !== container) {
-                other.querySelector('img').style.opacity = '0.2';
-            }
-        });
+  image.addEventListener('mouseout', () => {
+    images.forEach((img) => {
+      img.style.opacity = '1';
     });
-
-    container.addEventListener('mouseleave', () => {
-        document.querySelectorAll('.image-container img').forEach(img => {
-            img.style.opacity = '1';
-        });
-    });
+  });
 });
