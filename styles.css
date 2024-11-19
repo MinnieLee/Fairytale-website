@@ -1,0 +1,44 @@
+body {
+    margin: 0;
+    background-color: black;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.gallery-container {
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.image-container {
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 1;
+}
+
+.image-container img {
+    display: block;
+    max-width: 200px;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.image-container:hover {
+    z-index: 10;
+}
+
+.image-container:hover img {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+}
+
+.image-container:hover ~ .image-container img {
+    opacity: 0.2;
+}
