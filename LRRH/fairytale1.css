@@ -206,7 +206,7 @@ section {
     padding: 15px;
     border-radius: 0px;
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     justify-content: space-between;
     background-color: #f9f5f2;
     border-bottom: 2px solid #f7ab74;
