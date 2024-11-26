@@ -670,34 +670,8 @@
 
     </div>
 
-    <!-- Memo note & Notification-->
+    <!-- Memo note-->
     <script>
-
-    // Select elements
-    const readingsSection = document.querySelector('.section-readings');
-    const notificationButton = document.querySelector('.section-four img[alt="3"]');
-
-    // Function to check if the user has scrolled to the end
-    function isScrolledToBottom(element) {
-        return element.scrollHeight - element.scrollTop === element.clientHeight;
-    }
-
-    // Event listener for scrolling in the readings section
-    readingsSection.addEventListener('scroll', () => {
-        if (isScrolledToBottom(readingsSection)) {
-            // Change the notification image
-            notificationButton.src = "Notification-one.png";
-        }
-    });
-
-    // Add click event listener for the changed image
-    notificationButton.addEventListener('click', () => {
-        if (notificationButton.src.includes("Notification-one.png")) {
-            alert('Take a Quiz!');
-        }
-    });
-
-
         // Select elements
         const modal = document.getElementById('memo-modal');
         const memoButton = document.querySelector('.memo-button');
@@ -717,12 +691,10 @@
 
         // Save the memo
         saveButton.addEventListener('click', () => {
-            const memoText = memoTextarea.value;
-            if (memoText) {// Display the memo content
-            } else {
-            }
-            modal.style.display = 'none'; // Close the modal
-        });
+    const memoText = memoTextarea.value;
+    // Perform any necessary actions with memoText here (e.g., saving to a database or localStorage)
+    modal.style.display = 'none'; // Close the modal
+});
 
         // Close modal on outside click
         window.addEventListener('click', (e) => {
@@ -732,7 +704,33 @@
         });
     </script>
 
-    
+<script>
+    // Select elements
+    const readingsSection = document.querySelector('.section-readings');
+    const notificationImage = document.querySelector('.section-four img[alt="3"]'); // Select the correct image based on its alt attribute
+
+    let notificationChanged = false; // To track if the image is changed
+
+    // Change the notification image when the end of the readings section is reached
+    readingsSection.addEventListener('scroll', () => {
+        const scrollPosition = readingsSection.scrollTop + readingsSection.clientHeight;
+        const scrollHeight = readingsSection.scrollHeight;
+
+        if (scrollPosition >= scrollHeight && !notificationChanged) {
+            notificationImage.src = "Notification-one.png"; // Change the image
+            notificationChanged = true; // Ensure the change happens only once
+        }
+    });
+
+    // Display "Take a Quiz!" on clicking the changed notification image
+    notificationImage.addEventListener('click', () => {
+        if (notificationChanged) {
+            alert("Take a Quiz!");
+        }
+    });
+</script>
+
+
 </body>
 
 </html>
