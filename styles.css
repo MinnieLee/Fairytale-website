@@ -149,9 +149,9 @@ body {
     transform: translate(-50%, -50%);
     width: calc(100% + 20px); /* Slightly larger than the image */
     height: calc(100% + 20px);
-    background-color: rgba(255, 255, 255, 0.07); /* Transparent white background */
+    background-color: rgba(255, 255, 255, 0); /* Transparent white background */
     border-radius: 12px;
-    box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0.8);
+    filter: drop-shadow(0 0 0px 10px rgba(255, 255, 255, 0.8));
     z-index: 11; /* Ensure it appears above other elements */
   }
   

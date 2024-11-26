@@ -20,34 +20,29 @@
         }
     });
 
-    // Select elements
     const list = document.getElementById('memo-list');
     const memoButton = document.querySelector('.memo-button');
     const closeButton = document.querySelector('#memo-list .close-button');
     const saveButton = document.getElementById('save-memo-button');
     const memoTextarea = document.getElementById('memo-textarea');
 
-    // Open the list when the memo button is clicked
     memoButton.addEventListener('click', () => {
-        list.style.display = 'flex'; // Show the list
+        list.style.display = 'flex'; 
     });
 
-    // Close the list when the close button is clicked
     closeButton.addEventListener('click', () => {
-        list.style.display = 'none'; // Hide the list
+        list.style.display = 'none'; 
     });
 
-    // Save the memo
+    // Save memo
     saveButton.addEventListener('click', () => {
         const memoText = memoTextarea.value;
-        // Perform any necessary actions with memoText here (e.g., saving to a database or localStorage)
-        list.style.display = 'none'; // Close the list
+        list.style.display = 'none'; 
     });
 
-    // Close the list on clicking outside the list content
     window.addEventListener('click', (e) => {
         if (e.target === list) {
-            list.style.display = 'none'; // Hide the list
+            list.style.display = 'none'; 
         }
     });
 
