@@ -718,10 +718,8 @@
         // Save the memo
         saveButton.addEventListener('click', () => {
             const memoText = memoTextarea.value;
-            if (memoText) {
-                alert(`Memo saved: ${memoText}`); // Display the memo content
+            if (memoText) {// Display the memo content
             } else {
-                alert('Memo is empty!');
             }
             modal.style.display = 'none'; // Close the modal
         });
