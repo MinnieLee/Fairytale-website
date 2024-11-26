@@ -185,8 +185,8 @@
             text-align: left;
         }
 
-     
-   h2 {
+
+        h2 {
             font-size: 25px;
             margin-bottom: 10px;
             color: black;
@@ -400,29 +400,39 @@
 
         /* Scrollable Readings Section */
         /* Scrollable Readings Section */
-.section-readings {
-    flex: 1; /* Take remaining space */
-    overflow-y: auto; /* Enable scrolling */
-    padding: 20px; /* Add padding for better readability */
-    background-color: #f9f5f2;
-    margin-top: 0; /* Avoid offset or margin issues */
-}
+        .section-readings {
+            flex: 1;
+            /* Take remaining space */
+            overflow-y: auto;
+            /* Enable scrolling */
+            padding: 20px;
+            /* Add padding for better readability */
+            background-color: #f9f5f2;
+            margin-top: 0;
+            /* Avoid offset or margin issues */
+        }
 
-.section-readings p {
-    margin-top:5px;
-    margin-bottom: 10px;
-    font-size: 16px;
-    color: #555;
-    line-height: 1.6;
-}
+        .section-readings p {
+            margin-top: 5px;
+            margin-bottom: 10px;
+            font-size: 16px;
+            color: #555;
+            line-height: 1.6;
+        }
 
-/* Ensure other sections don't interfere */
-.section-one, .section-two, .section-three, .section-four {
-    position: sticky; /* Stick to their positions */
-}
+        /* Ensure other sections don't interfere */
+        .section-one,
+        .section-two,
+        .section-three,
+        .section-four {
+            position: sticky;
+            /* Stick to their positions */
+        }
 
-.modal {
-            display: none; /* Hidden by default */
+        /* memo button */
+        .modal {
+            display: none;
+            /* Hidden by default */
             position: fixed;
             top: 0;
             left: 0;
@@ -479,7 +489,6 @@
             color: black;
             margin-right: 10px;
         }
-
     </style>
 </head>
 
@@ -585,7 +594,7 @@
                     Hot Riding Hood, Little Red Running Shorts, Little Red Riding Crop, or any number of
                     other seductive sirens, attractive fashionistas, and unyielding avengers who face down
                     the horrors of beasts in the forest.
-             
+
                     We often think of “Little Red Riding Hood” as a story with a whiff of the archaic, but
                     it is in fact alive and present in our own culture with near manic expressive intensity. So
                     ubiquitous is the tale that it sometimes disappears from sight precisely because it is so
@@ -598,7 +607,7 @@
                     feeds on human life. We are as much in the realm of myth as of fairy tale, with stories
                     that provide a platform for staging the consequences of desires, sinister and benign, in
                     their most vivid and extreme form.
-               
+
                     “Little Red Riding Hood” most likely emerged as part of a storytelling culture that took
                     up the theme of predatory animals roaming the countryside in search of food. As Barbara
                     Ehrenreich tells us, “human storytelling ... grew out of encounters with real animal
@@ -614,7 +623,7 @@
                     Hot Riding Hood, Little Red Running Shorts, Little Red Riding Crop, or any number of
                     other seductive sirens, attractive fashionistas, and unyielding avengers who face down
                     the horrors of beasts in the forest.
-             
+
                     We often think of “Little Red Riding Hood” as a story with a whiff of the archaic, but
                     it is in fact alive and present in our own culture with near manic expressive intensity. So
                     ubiquitous is the tale that it sometimes disappears from sight precisely because it is so
@@ -627,7 +636,7 @@
                     feeds on human life. We are as much in the realm of myth as of fairy tale, with stories
                     that provide a platform for staging the consequences of desires, sinister and benign, in
                     their most vivid and extreme form.
-               
+
                     “Little Red Riding Hood” most likely emerged as part of a storytelling culture that took
                     up the theme of predatory animals roaming the countryside in search of food. As Barbara
                     Ehrenreich tells us, “human storytelling ... grew out of encounters with real animal
@@ -637,31 +646,58 @@
 
             </section>
 
-     
-                <section class="section-four">
-                    <img src="Comment.png" alt="1" class="png-button memo-button">
-                    <a href="/index.html"><img src="Homee.png" alt="2" class="png-button"></a>
-                    <img src="Notification.png" alt="3" class="png-button">
-                </section>
-            </article>
-    
-            <!-- Modal Structure -->
-            <div id="memo-modal" class="modal">
-                <div class="modal-content">
-                    <div class="modal-header">Memo</div>
-                    <textarea id="memo-textarea" placeholder="Write your memo here..."></textarea>
-                    <div>
-                        <button class="close-button">Close</button>
-                        <button id="save-memo-button">Save</button>
-                    </div>
+
+            <section class="section-four">
+                <img src="Comment.png" alt="1" class="png-button memo-button">
+                <a href="/index.html"><img src="Homee.png" alt="2" class="png-button"></a>
+                <img src="Notification.png" alt="3" class="png-button">
+            </section>
+        </article>
+
+        <!-- Memo note-->
+        <div id="memo-modal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">Memo</div>
+                <textarea id="memo-textarea" placeholder="Write your memo here..."></textarea>
+                <div>
+                    <button class="close-button">Close</button>
+                    <button id="save-memo-button">Save</button>
                 </div>
             </div>
-      
-    </div>
+        </div>
 
     </div>
 
+    </div>
+
+    <!-- Memo note & Notification-->
     <script>
+
+    // Select elements
+    const readingsSection = document.querySelector('.section-readings');
+    const notificationButton = document.querySelector('.section-four img[alt="3"]');
+
+    // Function to check if the user has scrolled to the end
+    function isScrolledToBottom(element) {
+        return element.scrollHeight - element.scrollTop === element.clientHeight;
+    }
+
+    // Event listener for scrolling in the readings section
+    readingsSection.addEventListener('scroll', () => {
+        if (isScrolledToBottom(readingsSection)) {
+            // Change the notification image
+            notificationButton.src = "Notification-one.png";
+        }
+    });
+
+    // Add click event listener for the changed image
+    notificationButton.addEventListener('click', () => {
+        if (notificationButton.src.includes("Notification-one.png")) {
+            alert('Take a Quiz!');
+        }
+    });
+
+
         // Select elements
         const modal = document.getElementById('memo-modal');
         const memoButton = document.querySelector('.memo-button');
@@ -697,6 +733,8 @@
             }
         });
     </script>
+
+    
 </body>
 
 </html>
