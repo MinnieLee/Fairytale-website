@@ -489,6 +489,38 @@
             color: black;
             margin-right: 10px;
         }
+
+            /* Styling for dropdown menu */
+            .dropdown-menu {
+            position: absolute;
+            top: 60px; /* Adjust to match your button's position */
+            right: 20px;
+            background: #f9f5f2;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            z-index: 1000;
+            padding: 10px 20px;
+        }
+
+        .dropdown-menu ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .dropdown-menu li {
+            margin: 10px 0;
+        }
+
+        .dropdown-menu a {
+            text-decoration: none;
+            font-size: 18px;
+            color: #333;
+            transition: color 0.3s ease;
+        }
+
+        .dropdown-menu a:hover {
+            color: #f73e3e;
+        }
     </style>
 </head>
 
@@ -575,6 +607,18 @@
             <section class="section-two">
                 <p class="center-text">Be cautious and don't trust strangers</p>
             </section>
+
+
+        <!-- Dropdown Menu -->
+        <div id="menu-dropdown" class="dropdown-menu" style="display: none;">
+            <ul>
+                <li><a href="cinderella.html">Cinderella</a></li>
+                <li><a href="sleeping_beauty.html">Sleeping Beauty</a></li>
+                <li><a href="snow_white.html">Snow White</a></li>
+            </ul>
+        </div>
+        <!-- Other content -->
+    </div>
 
             <section class="section-three">
                 <button class="circle-button top-left">Back</button>
@@ -726,6 +770,28 @@
     notificationImage.addEventListener('click', () => {
         if (notificationChanged) {
             alert("Take a Quiz!");
+        }
+    });
+</script>
+
+<script>
+    // Select the menu button and dropdown
+    const menuButton = document.getElementById('menu-button');
+    const menuDropdown = document.getElementById('menu-dropdown');
+
+    // Toggle dropdown visibility when the menu button is clicked
+    menuButton.addEventListener('click', () => {
+        if (menuDropdown.style.display === 'none' || menuDropdown.style.display === '') {
+            menuDropdown.style.display = 'block'; // Show menu
+        } else {
+            menuDropdown.style.display = 'none'; // Hide menu
+        }
+    });
+
+    // Close the dropdown menu when clicking outside
+    window.addEventListener('click', (e) => {
+        if (!menuDropdown.contains(e.target) && e.target !== menuButton) {
+            menuDropdown.style.display = 'none';
         }
     });
 </script>
