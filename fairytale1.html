@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,12 +11,12 @@
             padding: 0;
             box-sizing: border-box;
         }
-    
+
         body {
-            font-family:"Inter";
+            font-family: "Inter";
             background-color: #ffffff;
         }
-    
+
         .containerr {
             display: grid;
             grid-template-columns: 500px 1fr;
@@ -25,25 +26,25 @@
             width: 100vw;
             height: 100vh;
             margin-top: 1%;
-            
+
         }
-    
+
         @media only screen and (max-width: 800px) {
             .containerr {
                 grid-template-columns: 1fr;
             }
         }
-    
+
         .subtitles {
             display: flex;
             flex-direction: column;
             overflow-y: auto;
             background-color: #ffffff00;
-            padding: 20px;
+            padding: 10px 20px 20px 20px;
             border-radius: 10px;
             height: 90%;
         }
-        
+
         .subtitless {
             display: flex;
             flex-direction: column;
@@ -60,90 +61,115 @@
             background-color: rgba(250, 235, 215, 0);
             color: #f73e3e;
             text-transform: uppercase;
-            padding: 10px 20px;
+            padding: 0px 20px;
             border-radius: 5px;
         }
-    
+
         .subtitle {
-    padding: 25px;
-    background-color: #f9f5f2;
-    color: white;
-    margin-bottom: 10px;
-    border-radius: 30px;
-    text-decoration: none;
-    border: 2px solid #f7ab74;
-    transition: background-color 0.3s, height 0.3s;
-    display: flex; /* Use flexbox for alignment */
-    align-items: center;
-    justify-content: space-between; /* Space between the box and the text */
-    height: 100px; 
-}
+            padding: 25px;
+            background-color: #f9f5f2;
+            color: white;
+            margin-bottom: 10px;
+            border-radius: 30px;
+            text-decoration: none;
+            border: 2px solid #f7ab74;
+            transition: background-color 0.3s, height 0.3s;
+            display: flex;
+            /* Use flexbox for alignment */
+            align-items: center;
+            justify-content: space-between;
+            /* Space between the box and the text */
+            height: 100px;
+        }
 
-.subtitlequiz {
-    padding: 0; /* Remove extra padding */
-    background-color: #f73e3e;
-    color: white;
-    margin-bottom: 10px;
-    border-radius: 28px;
-    text-decoration: none;
-    transition: background-color 0.3s, height 0.3s;
-    display: flex; /* Flexbox for alignment */
-    align-items: center; /* Vertical centering */
-    justify-content: center; /* Horizontal centering */
-    height: 60px; /* Keep the height */
-    font-size: 24px; /* Adjust font size for better visibility */
-    font-weight: bold; /* Emphasize the text */
-    text-transform: uppercase; /* Ensure all letters are uppercase */
-}
+        .subtitlequiz {
+            padding: 0;
+            /* Remove extra padding */
+            background-color: #f73e3e;
+            color: white;
+            margin-bottom: 10px;
+            border-radius: 28px;
+            text-decoration: none;
+            display: flex;
+            /* Flexbox for alignment */
+            align-items: center;
+            /* Vertical centering */
+            justify-content: center;
+            /* Horizontal centering */
+            height: 70px;
+            /* Keep the height */
+            font-size: 24px;
+            /* Adjust font size for better visibility */
+            font-weight: bold;
+            /* Emphasize the text */
+            text-transform: uppercase;
+            /* Ensure all letters are uppercase */
+        }
 
 
 
-.subtitle .content {
-    display: flex;
-    flex-direction: column;
-}
+        .subtitle .content {
+            display: flex;
+            flex-direction: column;
+        }
 
-.subtitle .square-box {
-    width: 90px; /* Fixed size for the square box */
-    height: 90px; /* Match the aspect ratio or preferred size */
-    background-color: rgba(255, 255, 255, 0); /* No background color */
-    border-radius: 15px; /* Optional rounded corners */
-    flex-shrink: 0; /* Prevent resizing */
-    margin-left: 0px;
-    overflow: hidden; /* Prevent image overflow */
-    display: flex; /* Flexbox for centering */
-    align-items: center; /* Center image vertically */
-    justify-content: center; /* Center image horizontally */
-}
+        .subtitle .square-box {
+            width: 90px;
+            /* Fixed size for the square box */
+            height: 90px;
+            /* Match the aspect ratio or preferred size */
+            background-color: rgba(255, 255, 255, 0);
+            /* No background color */
+            border-radius: 15px;
+            /* Optional rounded corners */
+            flex-shrink: 0;
+            /* Prevent resizing */
+            margin-left: 0px;
+            overflow: hidden;
+            /* Prevent image overflow */
+            display: flex;
+            /* Flexbox for centering */
+            align-items: center;
+            /* Center image vertically */
+            justify-content: center;
+            /* Center image horizontally */
+        }
 
-.subtitle .square-box img {
-    max-width: 80%; /* Ensure the image doesn't exceed the box's width */
-    max-height: 80%; /* Ensure the image doesn't exceed the box's height */
-    object-fit: contain; /* Scale the image to fit within the box while maintaining aspect ratio */
-    margin-left: 0%;
-}
+        .subtitle .square-box img {
+            max-width: 80%;
+            /* Ensure the image doesn't exceed the box's width */
+            max-height: 80%;
+            /* Ensure the image doesn't exceed the box's height */
+            object-fit: contain;
+            /* Scale the image to fit within the box while maintaining aspect ratio */
+            margin-left: 0%;
+        }
 
-/* .subtitle .square-box:hover {
-    width: 130px; 
-    height: 100px;
-    background-color: #ffffff00; 
-    border-radius: 15px; 
-    flex-shrink: 0; 
-    margin-left: 0px;
-} */
-    
-        .subtitle:hover{
+        /* .subtitle .square-box:hover {
+        width: 130px; 
+        height: 100px;
+        background-color: #ffffff00; 
+        border-radius: 15px; 
+        flex-shrink: 0; 
+        margin-left: 0px;
+    } */
+
+        .subtitle:hover {
             padding: 25px;
             height: 120px;
-            border: 2px solid #fd6565; /* Add a red border on hover */
-            box-sizing: border-box; /* Ensure the border doesn't affect layout */
+            border: 2px solid #fd6565;
+            /* Add a red border on hover */
+            box-sizing: border-box;
+            /* Ensure the border doesn't affect layout */
         }
-        
-        .subtitlequiz:hover{
-            border: 2px solid #000000; /* Add a red border on hover */
-            box-sizing: border-box; /* Ensure the border doesn't affect layout */
+
+        .subtitlequiz:hover {
+            border: 2px solid #000000;
+            /* Add a red border on hover */
+            box-sizing: border-box;
+            /* Ensure the border doesn't affect layout */
         }
-    
+
         .subtitle h3 {
             font-family: Source Sans Variable;
             font-size: 18px;
@@ -151,230 +177,431 @@
             margin-bottom: 5px;
         }
 
-    
+
         .subtitle p {
             font-size: 16px;
             font-weight: 450;
             color: rgb(65, 65, 74);
-            text-align: left; 
+            text-align: left;
         }
 
-    
-        article {
-            background-color: white;
-            padding: 15px;
-            border-radius: 10px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-            overflow-y: auto;
-            height: 100%;
-            
-        }
-    
-        li {
-                font-size: 16px;
-                margin-left:20px;
-                margin-bottom:5px;
-            }
-    
-        li:hover{
-                color: #ee7674;
-            }
-    
-        h1 {
-            color: #388087;
-            font-size: 40px;
-            margin-bottom: 12px;
-        }
-    
-        @keyframes tracking{
-         0%{
-            letter-spacing: 0;
-            color:#388087;
-         }
-         100%{
-            letter-spacing:5px;
-            color:#F8C8DC;
-         }
-        }
-    
-        h2 {
+     
+   h2 {
             font-size: 25px;
             margin-bottom: 10px;
             color: black;
-           
-        }
-    
-       #headone:hover{
-        color:#ee7674;
-           transform: translateX(1000px);
-           transition: transform 3s ease-in-out;
-        }
-    
-        h4 a {
-            color: #388087;
-            text-decoration: none;
-        }
-    
-        /* p {
-            font-size: 20px;
-            color: black;
-            margin: 10px auto;
-            text-align: left; 
-        } */
 
-       
-        .box {
-            margin-top:20px;
-            margin-bottom: 10px;
-            padding: 15px;
-            background-color: #fff;
-            border: 1px solid #388087;
-            border-radius: 10px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
         }
-    
-        .box:hover {
-                margin-bottom: 10px;
-                padding: 15px;
-                background-color: #BADFE7;
-                border: 1px solid white;
-                border-radius: 10px;
-                box-shadow: 0px 0px 10px 0px #388087;
-            }
-    
-        </style>
+
+        /* General styling for the article sections */
+        /* General article styling */
+        article {
+            display: flex;
+            background-color: #f9f5f2;
+            flex-direction: column;
+            gap: 0px;
+            /* Reduced gap between sections */
+            padding: 20px;
+            border-radius: 20px;
+            /* padding: 15px; */
+            border-radius: 40px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            overflow-y: auto;
+
+        }
+
+        /* .section-one,
+            .section-two,
+            .section-three,
+            .section-four {
+                flex-shrink: 0; 
+            } */
+
+        /* Section styling */
+        section {
+            padding: 15px;
+            border-radius: 0px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #f9f5f2;
+            /* Default background */
+            border-bottom: 2px solid #f7ab74;
+            /* Add the separator line */
+        }
+
+        /* First Section */
+        .section-one {
+            position: sticky;
+            top: 0;
+            /* Sticks to the top */
+            z-index: 3;
+            /* Ensure it stays above other elements */
+            background-color: #f9f5f2;
+            /* Match the section background */
+        }
+
+        .section-one h2 {
+            margin: 0;
+            /* Remove default margin from title */
+        }
+
+        .circle-button.top-right {
+            position: absolute;
+            /* Positioning for right-top alignment */
+            top: 1px;
+            /* Adjust distance from the top */
+            right: 10px;
+            /* Adjust distance from the right */
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: #f73e3e;
+            color: white;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .circle-button.top-right:hover {
+            background-color: #fd6565;
+            /* Change color on hover */
+        }
+
+
+        /* Second Section */
+
+        .section-two {
+            position: sticky;
+            top: 60px;
+            /* Adjust based on the height of Section 1 */
+            z-index: 2;
+            background-color: #f9f5f2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+
+        }
+
+        .center-text {
+            font-size: 20px;
+            text-align: center;
+            color: #333;
+        }
+
+        /* Third Section */
+        .section-three {
+            flex: 0.1;
+            background-color: #f9f5f2;
+            padding: 10px;
+            border-radius: 0px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: sticky;
+            z-index: 1;
+            /* border-bottom: none;  */
+        }
+
+        .readings {
+            background-color: #f9f5f2;
+            position: relative;
+            margin-top: 40px;
+            padding: 10px;
+            /* Reduced padding */
+            border-radius: 0px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+
+        }
+
+        /* Center content for title and readings */
+        .center-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .middle-title {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        /* .readings p {
+                margin-bottom: 5px;
+                font-size: 16px;
+                color: #555;
+            } */
+
+        /* Top-left and top-right buttons */
+        .circle-button {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: #f73e3e;
+            color: white;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            /* Absolute positioning for buttons */
+        }
+
+        .circle-button.top-left {
+            top: 5px;
+            /* Adjusted for tighter spacing */
+            left: 5px;
+        }
+
+        .circle-button.top-right {
+            top: 5px;
+            right: 5px;
+        }
+
+        .circle-button:hover {
+            background-color: #fd6565;
+        }
+
+
+        /* Fourth Section */
+
+        .section-four {
+            position: sticky;
+            bottom: 0;
+            z-index: 2;
+            background-color: #f9f5f2;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            border-bottom: none;
+        }
+
+        .png-button {
+            width: 60px;
+            height: 60px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .png-button:hover {
+            transform: scale(1.1);
+        }
+
+        /* Scrollable Readings Section */
+        /* Scrollable Readings Section */
+.section-readings {
+    flex: 1; /* Take remaining space */
+    overflow-y: auto; /* Enable scrolling */
+    padding: 20px; /* Add padding for better readability */
+    background-color: #f9f5f2;
+    margin-top: 0; /* Avoid offset or margin issues */
+}
+
+.section-readings p {
+    margin-top:5px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Ensure other sections don't interfere */
+.section-one, .section-two, .section-three, .section-four {
+    position: sticky; /* Stick to their positions */
+}
+
+    </style>
 </head>
+
 <body>
-   
+
     <div class="containerr">
         <nav class="subtitless">
             <h2 class="subtitles-content">Little Red Riding Hood</h2>
-        <nav class="subtitles">
-            
-            
-            <a class="subtitle" href="#section1" style="background-color:#f9f5f2">
-                <div class="content">
-                    <h3>The Classic Fairy Tales: LRRH </h3>
-                    <p>Introduction, Charles Perraul,...</p>
-                </div>
-                <div class="square-box">
-                    <img src="LR1.png" alt="Little Red Riding Hood">
-                </div>
-                
-                
-            </a>
-            
+            <nav class="subtitles">
 
-            <a class="subtitle" href="#section2" style="background-color: #f9f5f2;">
-                <div class="content">
-             <h3>The Little Girl and the Wolf</h3>
-            <p>by James Thurber</p>
-        </div>
-        <div class="square-box">
-            <img src="LR2.png" alt="Little Red Riding Hood">
-        </div> 
-            </a> 
 
-            <a class="subtitle" href="#section3" style="background-color: #f9f5f2;">
-                <div class="content">
-            <h3>Yours, Mine, and Ours</h3>
-            <p>from The Classic Fairy Tales
-            </p>
-        </div>
-        <div class="square-box">
-            <img src="LR3.png" alt="Little Red Riding Hood">
-        </div>
-            </a>         
-        
-            <a class="subtitle" href="#section4" style="background-color: #f9f5f2;">
-                <div class="content">
-            <h3>Wolf</h3>
-            <p>by Francesca Lia Block
-            </p>
-        </div>
-        <div class="square-box">
-            <img src="LR4.png" alt="Little Red Riding Hood">
-        </div>
-            </a> 
+                <a class="subtitle" href="#section1" style="background-color:#f9f5f2">
+                    <div class="content">
+                        <h3>The Classic Fairy Tales: LRRH </h3>
+                        <p>Introduction, Charles Perraul,...</p>
+                    </div>
+                    <div class="square-box">
+                        <img src="LR1.png" alt="Little Red Riding Hood">
+                    </div>
 
-            <a class="subtitle" href="#section5" style="background-color: #f9f5f2;">
-                <div class="content">
-            <h3>Videos</h3>
-            <p>Link to Video File Document
-            </p>
-        </div>
-        <div class="square-box">
-            <img src="LR5.png" alt="Little Red Riding Hood">
-        </div>
-            </a> 
 
-            <a class="subtitlequiz" href="#section6" style="background-color: #f73e3e;">
-            <h3>QUIZ</h3>
-            </a> 
+                </a>
 
-            <img src="LRRH.BGG.png">
 
+                <a class="subtitle" href="#section2" style="background-color: #f9f5f2;">
+                    <div class="content">
+                        <h3>The Little Girl and the Wolf</h3>
+                        <p>by James Thurber</p>
+                    </div>
+                    <div class="square-box">
+                        <img src="LR2.png" alt="Little Red Riding Hood">
+                    </div>
+                </a>
+
+                <a class="subtitle" href="#section3" style="background-color: #f9f5f2;">
+                    <div class="content">
+                        <h3>Yours, Mine, and Ours</h3>
+                        <p>from The Classic Fairy Tales
+                        </p>
+                    </div>
+                    <div class="square-box">
+                        <img src="LR3.png" alt="Little Red Riding Hood">
+                    </div>
+                </a>
+
+                <a class="subtitle" href="#section4" style="background-color: #f9f5f2;">
+                    <div class="content">
+                        <h3>Wolf</h3>
+                        <p>by Francesca Lia Block
+                        </p>
+                    </div>
+                    <div class="square-box">
+                        <img src="LR4.png" alt="Little Red Riding Hood">
+                    </div>
+                </a>
+
+                <a class="subtitle" href="#section5" style="background-color: #f9f5f2;">
+                    <div class="content">
+                        <h3>Videos</h3>
+                        <p>Link to Video File Document
+                        </p>
+                    </div>
+                    <div class="square-box">
+                        <img src="LR5.png" alt="Little Red Riding Hood">
+                    </div>
+                </a>
+
+                <a class="subtitlequiz" href="#section6" style="background-color: #f73e3e;">
+                    <h3>QUIZ</h3>
+                </a>
+
+                <img src="LRRH.BGG.png">
+
+            </nav>
         </nav>
-    </nav>
-    
 
-    <article>  
-        <h1>AI content creation: Ushering in the unimaginable</h1> 
-        <h2 id="headone">Embrace cutting-edge AI content creation tools to transform your marketing. Balance human input while harnessing machine efficiency.</h2>
-     <h4><a href="https://martech.org/author/allen-martinez/">Allen Martinez</a> on April 26, 2024 at 9:57 am | Reading time: 11 minutes</h4>
-        
-        <p>Sam Altman’s proclamation that “movies are going to become video games and video games are going to become something unimaginably better” is more than just a prediction — it’s a vision of a new frontier in entertainment and content creation.</p>
-        <p>Artificial intelligence (AI) is already blurring the lines between passive viewing and active participation. It may create immersive, interactive and personalized experiences beyond anything we can now imagine.</p>
-        <p>This is why it’s essential CEOs and brand leaders recognize the profound connection between storytelling and technology. By combining storytelling and technology, we can achieve new levels of creative expression and audience engagement.</p>
-        <br>
-        <a href="https://x.com/sama/status/1776083954786836979?ref_src=twsrc%5Etfw%7Ctwcamp%5Etweetembed%7Ctwterm%5E1776083954786836979%7Ctwgr%5E16df257252f1a04a3252e8b1b1898c07467bcc80%7Ctwcon%5Es1_&ref_url=https%3A%2F%2Fmartech.org%2Fai-content-creation-ushering-in-the-unimaginable%2F">
-        <img class="one" src="quote.jpg" >
-        </a>
-        <br>
-        <br>
-        <br>
-        
-       
-        <div class="box" id="section1"> 
-        <h2 id="headone">The rise of AI agents</h2>
-                    
-        <p><a href="https://yellow.ai/blog/ai-agents/">AI agents</a> will play a pivotal role in realizing this vision. They will facilitate the seamless integration of content creation tools, letting creators focus more on the artistry and less on the mechanics. Automating routine tasks and synthesizing complex data into actionable insights will change what’s possible in video production and game development.</p>
-        <p>A standout feature of AI-driven video content is its ability to engage the senses, redefining video <a href="https://martech.org/the-ai-content-creation-space-is-growing/">content creation.</a> This will have a profound impact. Here are just a few ideas for AI services and use cases in the games and movies:</p>
-    
-        <br>
-        <ul>
-            
-            <li><strong>Real-time plot alteration:</strong> Narratives based on viewer/player reactions, personalizing the story as it unfolds.</li>
-            <li><strong>Enhanced <a href="https://martech.org/topic/virtual-and-augmented-reality/">virtual reality:</a></strong> Immersive VR experiences indistinguishable from reality.</li>
-            <li><strong>Predictive content creation:</strong> The ability to predict audience preferences could generate more enjoyable content for viewers.</li>
-            <li><strong>Interactive storytelling:</strong> Viewers choose aspects of a story to explore, with AI generating content in real time.</li>
-            <li><strong>Emotionally responsive soundtracks:</strong> Music, <a href="https://developer.nvidia.com/rtx/path-tracing">lighting</a> and sound effects in films and games could be altered depending on the audience’s emotional state.</li>
-            <li><strong>AI scriptwriters:</strong> Enhanced NLP models could suggest outlines, structures and dialogue, or complete scenes based on the established tone and style.</li>
-            <li><strong>Personalized gaming challenges:</strong> Games that adapt to the skill level and preferences of the player, with challenges suited to their abilities.</li>
-            <li><strong>Character AI Deep Learning:</strong> Game characters could learn and evolve through player interaction.</li>
-            <li><strong>Procedural content generation:</strong> Infinite landscapes, levels or story arcs could make games and movies endlessly unique.</li>
-            <li><strong>AI-assisted animation:</strong> It could generate in-between frames or suggest new character animations.</li>
-            <li><strong>Voice synthesis:</strong> It could replicate voices, allowing for more diverse character dialogues without requiring extensive voice actor libraries.</li>
-            <li><strong>Facial expression and gesture AI:</strong> Enhanced recognition and replication of human expressions and gestures in characters to improve realism.</li>
-            <li><strong>Automated testing and debugging:</strong> Streamlining the testing phase of game development, identifying bugs and balancing issues more efficiently.</li>
-            <li><strong>AI in casting:</strong> Analyzing actor performances and predicting on-screen chemistry.</li>
-            <li><strong>Narrative exploration tools:</strong> Letting users explore alternative storylines or background details.</li>
-            <li><strong>Multi-sensory experiences:</strong> Beyond sight and sound, future AI may be able to stimulate other senses to enhance the immersive experience.</li>
-            <li><strong>Digital humans:</strong> Digital actors changing the dynamics of celebrity and performance.</li>
-            <li><strong>Learning from Viewers:</strong> Improving storytelling techniques or game mechanics by analyzing user interactions.</li>
-            <li><strong>Automated content moderation:</strong> Moderating user-generated content to maintain community standards.</li>
-            <li><strong>Virtual production assistants:</strong> Handling various aspects of production logistics, from scheduling to budget management.</li>
-            <li><strong>Enhanced localization:</strong> Content localization that can apply cultural nuance and slang when translating into other languages.</li>
-            <li><strong>User-generated content curation:</strong> Curating and enhancing user-generated content in games.</li>
-            <li><strong>Immersive educational content:</strong> Interactive educational content that adapts to the learning pace of the user.</li>
-            <li><strong>AI game masters:</strong> In RPG games, AI could play the game master, creating quests and storylines on the fly.</li>
-            <li><strong>Accessibility enhancements:</strong> Improving accessibility in games and movies via adjustments tailored for people with disabilities.</li>
-        
-        </ul>
-        </div>
-      
-    
-    </article>
-    
+        <article>
+            <!-- Fixed Sections -->
+            <section class="section-one">
+                <h2>Fairytale Archive</h2>
+                <button class="circle-button top-right">Menu</button>
+            </section>
+
+            <section class="section-two">
+                <p class="center-text">Be cautious and don't trust strangers</p>
+            </section>
+
+            <section class="section-three">
+                <button class="circle-button top-left">Back</button>
+                <button class="circle-button top-right">Next</button>
+                <h3 class="middle-title">The Classic Fairy Tales: Little Red Riding Hood</h3>
+            </section>
+
+            <!-- Scrollable Section -->
+            <section class="section-readings">
+                <p>
+                    “Little Red Riding Hood was my first love. I felt that if I could have married Little Red
+                    Riding Hood, I should have known perfect bliss.” When Charles Dickens made this
+                    confession, he was living in an age that knew only the innocent child in stories collected
+                    by Charles Perrault and the Brothers Grimm. In those folkloric treatments, a villainous
+                    predator squares off against a sweet, trusting child and earns a bad name for himself
+                    as a ruthless, gluttonous beast. Dickens's first love had not yet grown up to become Red
+                    Hot Riding Hood, Little Red Running Shorts, Little Red Riding Crop, or any number of
+                    other seductive sirens, attractive fashionistas, and unyielding avengers who face down
+                    the horrors of beasts in the forest.
+             
+                    We often think of “Little Red Riding Hood” as a story with a whiff of the archaic, but
+                    it is in fact alive and present in our own culture with near manic expressive intensity. So
+                    ubiquitous is the tale that it sometimes disappears from sight precisely because it is so
+                    familiar. The girl in red appears in story and song, on screen and on the written page, on
+                    the runway as well as on stage. A source of adult entertainment, she is also very much
+                    at home in the nursery, telling us not only about encounters between predator and prey
+                    but also about human interactions that foreground innocence and seduction. Hers is a
+                    story about appetite in all shadings of the term, from primal hunger to sexual desire,
+                    both tainted by the threat of desire turning dark and deadly—desire so rapacious that it
+                    feeds on human life. We are as much in the realm of myth as of fairy tale, with stories
+                    that provide a platform for staging the consequences of desires, sinister and benign, in
+                    their most vivid and extreme form.
+               
+                    “Little Red Riding Hood” most likely emerged as part of a storytelling culture that took
+                    up the theme of predatory animals roaming the countryside in search of food. As Barbara
+                    Ehrenreich tells us, “human storytelling ... grew out of encounters with real animal
+                    predators and served as a means of fear management as well as a means to ready the
+                    group for future encounters.” The earliest versions of “Little Red Riding Hood” featured.
+
+                    “Little Red Riding Hood was my first love. I felt that if I could have married Little Red
+                    Riding Hood, I should have known perfect bliss.” When Charles Dickens made this
+                    confession, he was living in an age that knew only the innocent child in stories collected
+                    by Charles Perrault and the Brothers Grimm. In those folkloric treatments, a villainous
+                    predator squares off against a sweet, trusting child and earns a bad name for himself
+                    as a ruthless, gluttonous beast. Dickens's first love had not yet grown up to become Red
+                    Hot Riding Hood, Little Red Running Shorts, Little Red Riding Crop, or any number of
+                    other seductive sirens, attractive fashionistas, and unyielding avengers who face down
+                    the horrors of beasts in the forest.
+             
+                    We often think of “Little Red Riding Hood” as a story with a whiff of the archaic, but
+                    it is in fact alive and present in our own culture with near manic expressive intensity. So
+                    ubiquitous is the tale that it sometimes disappears from sight precisely because it is so
+                    familiar. The girl in red appears in story and song, on screen and on the written page, on
+                    the runway as well as on stage. A source of adult entertainment, she is also very much
+                    at home in the nursery, telling us not only about encounters between predator and prey
+                    but also about human interactions that foreground innocence and seduction. Hers is a
+                    story about appetite in all shadings of the term, from primal hunger to sexual desire,
+                    both tainted by the threat of desire turning dark and deadly—desire so rapacious that it
+                    feeds on human life. We are as much in the realm of myth as of fairy tale, with stories
+                    that provide a platform for staging the consequences of desires, sinister and benign, in
+                    their most vivid and extreme form.
+               
+                    “Little Red Riding Hood” most likely emerged as part of a storytelling culture that took
+                    up the theme of predatory animals roaming the countryside in search of food. As Barbara
+                    Ehrenreich tells us, “human storytelling ... grew out of encounters with real animal
+                    predators and served as a means of fear management as well as a means to ready the
+                    group for future encounters.” The earliest versions of “Little Red Riding Hood” featured.
+                </p>
+
+            </section>
+
+            <section class="section-four">
+                <img src="Comment.png" alt="1" class="png-button">
+                <img src="Homee.png" alt="2" class="png-button">
+                <img src="Notification.png" alt="3" class="png-button">
+            </section>
+        </article>
+    </div>
+
+    <script>
+        // Button Click Handlers
+        document.querySelectorAll('.circle-button').forEach(button => {
+            button.addEventListener('click', () => {
+                alert(`${button.innerText} button clicked!`);
+            });
+        });
+
+        document.querySelectorAll('.png-button').forEach(image => {
+            image.addEventListener('click', () => {
+                alert(`${image.alt} clicked!`);
+            });
+        });
+    </script>
+
+    </div>
 </body>
+
 </html>
