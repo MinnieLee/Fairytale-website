@@ -5,544 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Little Red Riding Hood</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: "Inter";
-            background-color: #ffffff;
-        }
-
-        .containerr {
-            display: grid;
-            grid-template-columns: 500px 1fr;
-            background-color: #ffffff;
-            gap: 20px;
-            padding: 20px;
-            width: 100vw;
-            height: 100vh;
-            margin-top: 1%;
-
-        }
-
-        @media only screen and (max-width: 800px) {
-            .containerr {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        .subtitles {
-            display: flex;
-            flex-direction: column;
-            overflow-y: auto;
-            background-color: #ffffff00;
-            padding: 10px 20px 20px 20px;
-            border-radius: 10px;
-            height: 90%;
-        }
-
-        .subtitless {
-            display: flex;
-            flex-direction: column;
-            overflow-y: auto;
-            background-color: #ffffff00;
-            padding: 0px;
-            height: 100%;
-            max-width: 97%;
-        }
-
-        .subtitles-content {
-            font-weight: 700;
-            font-size: 60px;
-            background-color: rgba(250, 235, 215, 0);
-            color: #f73e3e;
-            text-transform: uppercase;
-            padding: 0px 20px;
-            border-radius: 5px;
-        }
-
-        .subtitle {
-            padding: 25px;
-            background-color: #f9f5f2;
-            color: white;
-            margin-bottom: 10px;
-            border-radius: 30px;
-            text-decoration: none;
-            border: 2px solid #f7ab74;
-            transition: background-color 0.3s, height 0.3s;
-            display: flex;
-            /* Use flexbox for alignment */
-            align-items: center;
-            justify-content: space-between;
-            /* Space between the box and the text */
-            height: 100px;
-        }
-
-        .subtitlequiz {
-            padding: 0;
-            /* Remove extra padding */
-            background-color: #f73e3e;
-            color: white;
-            margin-bottom: 10px;
-            border-radius: 28px;
-            text-decoration: none;
-            display: flex;
-            /* Flexbox for alignment */
-            align-items: center;
-            /* Vertical centering */
-            justify-content: center;
-            /* Horizontal centering */
-            height: 70px;
-            /* Keep the height */
-            font-size: 24px;
-            /* Adjust font size for better visibility */
-            font-weight: bold;
-            /* Emphasize the text */
-            text-transform: uppercase;
-            /* Ensure all letters are uppercase */
-        }
-
-
-
-        .subtitle .content {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .subtitle .square-box {
-            width: 90px;
-            /* Fixed size for the square box */
-            height: 90px;
-            /* Match the aspect ratio or preferred size */
-            background-color: rgba(255, 255, 255, 0);
-            /* No background color */
-            border-radius: 15px;
-            /* Optional rounded corners */
-            flex-shrink: 0;
-            /* Prevent resizing */
-            margin-left: 0px;
-            overflow: hidden;
-            /* Prevent image overflow */
-            display: flex;
-            /* Flexbox for centering */
-            align-items: center;
-            /* Center image vertically */
-            justify-content: center;
-            /* Center image horizontally */
-        }
-
-        .subtitle .square-box img {
-            max-width: 80%;
-            /* Ensure the image doesn't exceed the box's width */
-            max-height: 80%;
-            /* Ensure the image doesn't exceed the box's height */
-            object-fit: contain;
-            /* Scale the image to fit within the box while maintaining aspect ratio */
-            margin-left: 0%;
-        }
-
-        /* .subtitle .square-box:hover {
-        width: 130px; 
-        height: 100px;
-        background-color: #ffffff00; 
-        border-radius: 15px; 
-        flex-shrink: 0; 
-        margin-left: 0px;
-    } */
-
-        .subtitle:hover {
-            padding: 25px;
-            height: 120px;
-            border: 2px solid #fd6565;
-            /* Add a red border on hover */
-            box-sizing: border-box;
-            /* Ensure the border doesn't affect layout */
-        }
-
-        .subtitlequiz:hover {
-            border: 2px solid #000000;
-            /* Add a red border on hover */
-            box-sizing: border-box;
-            /* Ensure the border doesn't affect layout */
-        }
-
-        .subtitle h3 {
-            font-family: Source Sans Variable;
-            font-size: 18px;
-            color: #e27138;
-            margin-bottom: 5px;
-        }
-
-
-        .subtitle p {
-            font-size: 16px;
-            font-weight: 450;
-            color: rgb(65, 65, 74);
-            text-align: left;
-        }
-
-
-        h2 {
-            font-size: 25px;
-            margin-bottom: 10px;
-            color: black;
-
-        }
-
-        /* General styling for the article sections */
-        /* General article styling */
-        article {
-            display: flex;
-            background-color: #f9f5f2;
-            flex-direction: column;
-            gap: 0px;
-            /* Reduced gap between sections */
-            padding: 20px;
-            border-radius: 20px;
-            /* padding: 15px; */
-            border-radius: 40px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-            overflow-y: auto;
-
-        }
-
-        /* .section-one,
-            .section-two,
-            .section-three,
-            .section-four {
-                flex-shrink: 0; 
-            } */
-
-        /* Section styling */
-        section {
-            padding: 15px;
-            border-radius: 0px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            background-color: #f9f5f2;
-            /* Default background */
-            border-bottom: 2px solid #f7ab74;
-            /* Add the separator line */
-        }
-
-        /* First Section */
-        .section-one {
-            position: sticky;
-            top: 0;
-            /* Sticks to the top */
-            z-index: 3;
-            /* Ensure it stays above other elements */
-            background-color: #f9f5f2;
-            /* Match the section background */
-        }
-
-        .section-one h2 {
-            margin: 0;
-            /* Remove default margin from title */
-        }
-
-        .circle-button.top-right {
-            position: absolute;
-            /* Positioning for right-top alignment */
-            top: 1px;
-            /* Adjust distance from the top */
-            right: 10px;
-            /* Adjust distance from the right */
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background-color: #f73e3e;
-            color: white;
-            border: none;
-            font-size: 16px;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .circle-button.top-right:hover {
-            background-color: #fd6565;
-            /* Change color on hover */
-        }
-
-
-        /* Second Section */
-
-        .section-two {
-            position: sticky;
-            top: 60px;
-            /* Adjust based on the height of Section 1 */
-            z-index: 2;
-            background-color: #f9f5f2;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-
-        }
-
-        .center-text {
-            font-size: 20px;
-            text-align: center;
-            color: #333;
-        }
-
-        /* Third Section */
-        .section-three {
-            flex: 0.1;
-            background-color: #f9f5f2;
-            padding: 10px;
-            border-radius: 0px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            position: sticky;
-            z-index: 1;
-            /* border-bottom: none;  */
-        }
-
-        .readings {
-            background-color: #f9f5f2;
-            position: relative;
-            margin-top: 40px;
-            padding: 10px;
-            /* Reduced padding */
-            border-radius: 0px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-
-        }
-
-        /* Center content for title and readings */
-        .center-content {
-            position: relative;
-            z-index: 1;
-        }
-
-        .middle-title {
-            font-size: 20px;
-            margin-bottom: 10px;
-        }
-
-        /* .readings p {
-                margin-bottom: 5px;
-                font-size: 16px;
-                color: #555;
-            } */
-
-        /* Top-left and top-right buttons */
-        .circle-button {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background-color: #f73e3e;
-            color: white;
-            border: none;
-            font-size: 16px;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: absolute;
-            /* Absolute positioning for buttons */
-        }
-
-        .circle-button.top-left {
-            top: 5px;
-            /* Adjusted for tighter spacing */
-            left: 5px;
-        }
-
-        .circle-button.top-right {
-            top: 5px;
-            right: 5px;
-        }
-
-        .circle-button:hover {
-            background-color: #fd6565;
-        }
-
-
-        /* Fourth Section */
-
-        .section-four {
-            position: sticky;
-            bottom: 0;
-            z-index: 2;
-            background-color: #f9f5f2;
-            display: flex;
-            justify-content: space-evenly;
-            align-items: center;
-            border-bottom: none;
-        }
-
-        .png-button {
-            width: 60px;
-            height: 60px;
-            cursor: pointer;
-            transition: transform 0.3s ease;
-        }
-
-        .png-button:hover {
-            transform: scale(1.1);
-        }
-
-        /* Scrollable Readings Section */
-        /* Scrollable Readings Section */
-        .section-readings {
-            flex: 1;
-            /* Take remaining space */
-            overflow-y: auto;
-            /* Enable scrolling */
-            padding: 20px;
-            /* Add padding for better readability */
-            background-color: #f9f5f2;
-            margin-top: 0;
-            /* Avoid offset or margin issues */
-        }
-
-        .section-readings p {
-            margin-top: 5px;
-            margin-bottom: 10px;
-            font-size: 16px;
-            color: #555;
-            line-height: 1.6;
-        }
-
-        /* Ensure other sections don't interfere */
-        .section-one,
-        .section-two,
-        .section-three,
-        .section-four {
-            position: sticky;
-            /* Stick to their positions */
-        }
-
-        /* memo button */
-        .modal {
-            display: none;
-            /* Hidden by default */
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
-            z-index: 1000;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .modal-content {
-            background: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            width: 50%;
-            max-width: 500px;
-            text-align: center;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-
-        .modal-header {
-            font-size: 20px;
-            font-weight: bold;
-            margin-bottom: 20px;
-        }
-
-        .modal textarea {
-            width: 100%;
-            height: 150px;
-            margin-bottom: 20px;
-            font-size: 16px;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-
-        .modal button {
-            background-color: #f73e3e;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-        }
-
-        .modal button:hover {
-            background-color: #fd6565;
-        }
-
-        .close-button {
-            background: #ccc;
-            color: black;
-            margin-right: 10px;
-            margin-top: 10px;
-        }
-
-        .modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
-            z-index: 1000;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .modal-content {
-            background: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            width: 40%;
-            max-width: 400px;
-            text-align: center;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-
-        .modal-header {
-            font-size: 20px;
-            font-weight: bold;
-            margin-bottom: 15px;
-        }
-
-        .modal a {
-            text-decoration: none;
-            color: #f73e3e;
-        }
-
-        .modal a:hover {
-            text-decoration: underline;
-        }
-
-        .modal button {
-            background-color: #f73e3e;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-        }
-
-        .modal button:hover {
-            background-color: #fd6565;
-        }
-    </style>
+    <link rel="stylesheet" href="fairytale1.css">
 </head>
 
 <body>
@@ -561,10 +24,7 @@
                     <div class="square-box">
                         <img src="LR1.png" alt="Little Red Riding Hood">
                     </div>
-
-
                 </a>
-
 
                 <a class="subtitle" href="#section2" style="background-color: #f9f5f2;">
                     <div class="content">
@@ -612,23 +72,22 @@
                 <a class="subtitlequiz" href="#section6" style="background-color: #f73e3e;">
                     <h3>QUIZ</h3>
                 </a>
-
                 <img src="LRRH.BGG.png">
 
             </nav>
         </nav>
 
         <article>
-            <!-- Fixed Sections -->
+            <!-- Section 1 -->
             <section class="section-one">
                 <h2>Fairytale Archive</h2>
                 <button class="circle-button top-right">Menu</button>
             </section>
 
-            <!-- Modal for Menu -->
-            <div id="menu-modal" class="modal">
-                <div class="modal-content">
-                    <div class="modal-header">Fairy Tales</div>
+            <!-- Menu Button List -->
+            <div id="menu-list" class="list">
+                <div class="list-content">
+                    <div class="list-header">Fairy Tales</div>
                     <ul style="list-style: none; padding: 0; font-size: 18px;">
                         <li><a href="https://en.wikipedia.org/wiki/Cinderella" target="_blank">Cinderella</a></li>
                         <li><a href="https://en.wikipedia.org/wiki/Sleeping_Beauty_(1959_film)" target="_blank">Sleeping
@@ -641,11 +100,12 @@
                 </div>
             </div>
 
-
+            <!-- Section 2 -->
             <section class="section-two">
                 <p class="center-text">Be cautious and don't trust strangers</p>
             </section>
 
+            <!-- Section 3 -->
             <section class="section-three">
                 <button class="circle-button top-left">Back</button>
                 <button class="circle-button top-right">Next</button>
@@ -716,7 +176,7 @@
 
             </section>
 
-
+            <!-- Section 4 -->
             <section class="section-four">
                 <img src="Comment.png" alt="1" class="png-button memo-button">
                 <a href="/index.html"><img src="Homee.png" alt="2" class="png-button"></a>
@@ -725,9 +185,9 @@
         </article>
 
         <!-- Memo note-->
-        <div id="memo-modal" class="modal">
-            <div class="modal-content">
-                <div class="modal-header">Memo</div>
+        <div id="memo-list" class="list">
+            <div class="list-content">
+                <div class="list-header">Memo</div>
                 <textarea id="memo-textarea" placeholder="Write your memo here..."></textarea>
                 <div>
                     <button class="close-button">Close</button>
@@ -740,89 +200,7 @@
 
     </div>
 
-    <!-- Memo note-->
-    <script>
-        // Select elements
-        const modal = document.getElementById('memo-modal');
-        const memoButton = document.querySelector('.memo-button');
-        const closeButton = document.querySelector('#memo-modal .close-button'); // Ensure correct selection
-        const saveButton = document.getElementById('save-memo-button');
-        const memoTextarea = document.getElementById('memo-textarea');
-
-        // Open the modal when the memo button is clicked
-        memoButton.addEventListener('click', () => {
-            modal.style.display = 'flex'; // Show the modal
-        });
-
-        // Close the modal when the close button is clicked
-        closeButton.addEventListener('click', () => {
-            modal.style.display = 'none'; // Hide the modal
-        });
-
-        // Save the memo
-        saveButton.addEventListener('click', () => {
-            const memoText = memoTextarea.value;
-            // Perform any necessary actions with memoText here (e.g., saving to a database or localStorage)
-            modal.style.display = 'none'; // Close the modal
-        });
-
-        // Close the modal on clicking outside the modal content
-        window.addEventListener('click', (e) => {
-            if (e.target === modal) {
-                modal.style.display = 'none'; // Hide the modal
-            }
-        });
-    </script>
-
-    <script>
-        // Select elements
-        const readingsSection = document.querySelector('.section-readings');
-        const notificationImage = document.querySelector('.section-four img[alt="3"]'); // Select the correct image based on its alt attribute
-
-        let notificationChanged = false; // To track if the image is changed
-
-        // Change the notification image when the end of the readings section is reached
-        readingsSection.addEventListener('scroll', () => {
-            const scrollPosition = readingsSection.scrollTop + readingsSection.clientHeight;
-            const scrollHeight = readingsSection.scrollHeight;
-
-            if (scrollPosition >= scrollHeight && !notificationChanged) {
-                notificationImage.src = "Notification-one.png"; // Change the image
-                notificationChanged = true; // Ensure the change happens only once
-            }
-        });
-
-        // Display "Take a Quiz!" on clicking the changed notification image
-        notificationImage.addEventListener('click', () => {
-            if (notificationChanged) {
-                alert("Take a Quiz!");
-            }
-        });
-
-        // Menu modal logic
-        const menuModal = document.getElementById('menu-modal');
-        const menuButton = document.querySelector('.circle-button.top-right');
-
-        // Open the menu modal when the button is clicked
-        menuButton.addEventListener('click', () => {
-            menuModal.style.display = 'flex'; // Show the modal
-        });
-
-        // Close the menu modal when the close button is clicked
-        menuModal.querySelector('.close-button').addEventListener('click', () => {
-            menuModal.style.display = 'none'; // Hide the modal
-        });
-
-        // Close the menu modal when clicking outside the modal
-        window.addEventListener('click', (e) => {
-            if (e.target === menuModal) {
-                menuModal.style.display = 'none'; // Hide the modal
-            }
-        });
-
-    </script>
-
-
+    <script src="fairytale1.js"></script>
 </body>
 
 </html>
