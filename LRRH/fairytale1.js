@@ -3,17 +3,17 @@
     const menuList = document.getElementById('menu-list');
     const menuButton = document.querySelector('.circle-button.top-right');
 
-    // Open the menu list when the button is clicked
+    // Open the menu list
     menuButton.addEventListener('click', () => {
         menuList.style.display = 'flex'; // Show the list
     });
 
-    // Close the menu list when the close button is clicked
+    // Close the menu list 
     menuList.querySelector('.close-button').addEventListener('click', () => {
         menuList.style.display = 'none'; // Hide the list
     });
 
-    // Close the menu list when clicking outside the list
+    // Close the menu list-outside 
     window.addEventListener('click', (e) => {
         if (e.target === menuList) {
             menuList.style.display = 'none'; // Hide the list

@@ -16,9 +16,6 @@ body {
     justify-content: center;
     align-items: center;
   }
-  .image-collage:hover .image-container {
-    filter: brightness(50%);
-  }
   
   .image-container {
     position: absolute;
@@ -157,18 +154,13 @@ body {
     filter: drop-shadow(0 0 0px 10px rgba(255, 255, 255, 0.8));
     z-index: 11; /* Ensure it appears above other elements */
   }
-  .image-container:hover {
-
-    filter: brightness(100%) !important;
-
-    z-index: 9999;
-  }
+  
   .image-container:hover img {
     transform: scale(1.1); /* Slightly enlarge hovered image */
     z-index: 12; /* Bring hovered image to the front */
   }
   /* Dim other images on hover */
   .image-container:hover ~ .image-container img {
-    /* opacity: 0.2; */
+    opacity: 0.2;
   }
   
