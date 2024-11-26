@@ -4,9 +4,339 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Little Red Riding Hood</title>
-   
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+    
+        body {
+            font-family:"Inter";
+            background-color: #F6F6F2;
+        }
+    
+        .containerr {
+            display: grid;
+            grid-template-columns: 500px 1fr;
+            gap: 20px;
+            padding: 20px;
+            width: 100vw;
+            height: 100vh;
+            
+        }
+    
+        @media only screen and (max-width: 800px) {
+            .containerr {
+                grid-template-columns: 1fr;
+            }
+        }
+    
+        .subtitles {
+            display: flex;
+            flex-direction: column;
+            overflow-y: auto;
+            background-color: #ffffff00;
+            padding: 20px;
+            border-radius: 10px;
+            height: 90%;
+        }
+        
+        .subtitless {
+            display: flex;
+            flex-direction: column;
+            overflow-y: auto;
+            background-color: #ffffff00;
+            padding: 0px;
+            height: 100%;
+        }
+
+        .subtitles-content {
+            font-weight: 700;
+            font-size: 60px;
+            background-color: rgba(250, 235, 215, 0);
+            color: #f73e3e;
+            text-transform: uppercase;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+    
+        .subtitle {
+    padding: 25px;
+    background-color: #4B6587;
+    color: white;
+    margin-bottom: 10px;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: background-color 0.3s, height 0.3s;
+    cursor: url('brush.png'), auto;
+    display: flex; /* Use flexbox for alignment */
+    align-items: center;
+    justify-content: space-between; /* Space between the box and the text */
+    height: 120px; 
+}
+
+.subtitle .content {
+    display: flex;
+    flex-direction: column;
+}
+
+.subtitle .square-box {
+    width: 120px; /* Size of the square box */
+    height:90px;
+    background-color: #ffffff; /* Box color */
+    border-radius: 15px; /* Optional: Rounded corners */
+    flex-shrink: 0; /* Prevent the box from shrinking */
+    margin-left: 10px; /* Space between the box and content */
+}
+
+.subtitle .square-box:hover {
+    width: 130px; /* Size of the square box */
+    height: 100px;
+    background-color: #ffffff; /* Box color */
+    border-radius: 15px; /* Optional: Rounded corners */
+    flex-shrink: 0; /* Prevent the box from shrinking */
+    margin-left: 10px; /* Space between the box and content */
+}
+
+    
+        .subtitle:hover{
+            padding: 25px;
+            height: 140px;
+        }
+
+    
+        .subtitle h3 {
+            font-size: 20px;
+            margin-bottom: 5px;
+        }
+    
+        .subtitle p {
+            font-size: 14px;
+            font-weight: 450;
+            color: rgb(65, 65, 74);
+        }
+    
+        article {
+            background-color: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            overflow-y: auto;
+            height: 100%;
+            
+        }
+    
+        li {
+                font-size: 16px;
+                margin-left:20px;
+                margin-bottom:5px;
+            }
+    
+        li:hover{
+                color: #ee7674;
+            }
+    
+        h1 {
+            color: #388087;
+            font-size: 40px;
+            margin-bottom: 12px;
+        }
+    
+        @keyframes tracking{
+         0%{
+            letter-spacing: 0;
+            color:#388087;
+         }
+         100%{
+            letter-spacing:5px;
+            color:#F8C8DC;
+         }
+        }
+    
+        h2 {
+            font-size: 25px;
+            margin-bottom: 10px;
+            color: black;
+           
+        }
+    
+       #headone:hover{
+        color:#ee7674;
+           transform: translateX(1000px);
+           transition: transform 3s ease-in-out;
+        }
+    
+        h4 a {
+            color: #388087;
+            text-decoration: none;
+        }
+    
+        p {
+            font-size: 17px;
+            color: black;
+            margin: 10px auto;
+        }
+    
+        img{
+            max-width: 15%;
+            height: auto;
+            margin-top: 20px; 
+            padding-left:15px; 
+           
+        }
+    
+        img.one{
+            max-width: 50%;
+            height: auto;
+            margin-top: 8px;
+            margin-bottom: -30px;
+        }
+    
+        img.two{
+            max-width: 60%;
+            height: auto;
+            margin-top: 20px;     
+        }
+    
+        .box {
+            margin-top:20px;
+            margin-bottom: 10px;
+            padding: 15px;
+            background-color: #fff;
+            border: 1px solid #388087;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+    
+        .box:hover {
+                margin-bottom: 10px;
+                padding: 15px;
+                background-color: #BADFE7;
+                border: 1px solid white;
+                border-radius: 10px;
+                box-shadow: 0px 0px 10px 0px #388087;
+            }
+    
+        </style>
 </head>
 <body>
-    <img src="LRRH.jpg" alt="Fairytale 1" style="width: 100%; height: auto;">
+   
+    <div class="containerr">
+        <nav class="subtitless">
+            <h2 class="subtitles-content">Little Red Riding Hood</h2>
+        <nav class="subtitles">
+            
+            
+            <a class="subtitle" href="#section1" style="background-color:#ede2dc;">
+                <div class="content">
+                    <h3>The rise of AI agents</h3>
+                    <p>AI agents will play a pivotal role in realizing this vision.</p>
+                </div>
+                <div class="square-box"></div>
+            </a>
+            
+
+            <a class="subtitle" href="#section2" style="background-color: #D1D0E5;">
+                <div class="content">
+             <h3>AI content creation tools</h3>
+            <p>Crafting personalized growth through adaptive challenges</p>
+        </div>
+        <div class="square-box"></div> 
+            </a> 
+
+            <a class="subtitle" href="#section3" style="background-color: #F8C8DC;">
+                <div class="content">
+            <h3>AI content creation apps</h3>
+            <p>Empowering self-expression and personal growth
+            </p>
+        </div>
+        <div class="square-box"></div>
+            </a>         
+        
+            <a class="subtitle" href="#section4" style="background-color: #ee7674;">
+                <div class="content">
+            <h3>Cultivating digital communities</h3>
+            <p>AI-generated video content has the potential to foster social interaction...
+            </p>
+        </div>
+        <div class="square-box"></div>
+            </a> 
+
+            <a class="subtitle" href="#section5" style="background-color: #EAC6A3;">
+                <div class="content">
+            <h3>AI as a catalyst for self-expression</h3>
+            <p>ChatGPT vs. chatgpt vs.Gemini vs. Perplexity
+            </p>
+        </div>
+        <div class="square-box"></div>
+            </a> 
+
+            <a class="subtitle" href="#section6" style="background-color: #f73e3e;">
+            <h3>QUIZ</h3>
+            </a> 
+
+        </nav>
+    </nav>
+    
+
+    <article>  
+        <h1>AI content creation: Ushering in the unimaginable</h1> 
+        <h2 id="headone">Embrace cutting-edge AI content creation tools to transform your marketing. Balance human input while harnessing machine efficiency.</h2>
+     <h4><a href="https://martech.org/author/allen-martinez/">Allen Martinez</a> on April 26, 2024 at 9:57 am | Reading time: 11 minutes</h4>
+        
+        <p>Sam Altman’s proclamation that “movies are going to become video games and video games are going to become something unimaginably better” is more than just a prediction — it’s a vision of a new frontier in entertainment and content creation.</p>
+        <p>Artificial intelligence (AI) is already blurring the lines between passive viewing and active participation. It may create immersive, interactive and personalized experiences beyond anything we can now imagine.</p>
+        <p>This is why it’s essential CEOs and brand leaders recognize the profound connection between storytelling and technology. By combining storytelling and technology, we can achieve new levels of creative expression and audience engagement.</p>
+        <br>
+        <a href="https://x.com/sama/status/1776083954786836979?ref_src=twsrc%5Etfw%7Ctwcamp%5Etweetembed%7Ctwterm%5E1776083954786836979%7Ctwgr%5E16df257252f1a04a3252e8b1b1898c07467bcc80%7Ctwcon%5Es1_&ref_url=https%3A%2F%2Fmartech.org%2Fai-content-creation-ushering-in-the-unimaginable%2F">
+        <img class="one" src="quote.jpg" >
+        </a>
+        <br>
+        <br>
+        <br>
+        
+       
+        <div class="box" id="section1"> 
+        <h2 id="headone">The rise of AI agents</h2>
+                    
+        <p><a href="https://yellow.ai/blog/ai-agents/">AI agents</a> will play a pivotal role in realizing this vision. They will facilitate the seamless integration of content creation tools, letting creators focus more on the artistry and less on the mechanics. Automating routine tasks and synthesizing complex data into actionable insights will change what’s possible in video production and game development.</p>
+        <p>A standout feature of AI-driven video content is its ability to engage the senses, redefining video <a href="https://martech.org/the-ai-content-creation-space-is-growing/">content creation.</a> This will have a profound impact. Here are just a few ideas for AI services and use cases in the games and movies:</p>
+    
+        <br>
+        <ul>
+            
+            <li><strong>Real-time plot alteration:</strong> Narratives based on viewer/player reactions, personalizing the story as it unfolds.</li>
+            <li><strong>Enhanced <a href="https://martech.org/topic/virtual-and-augmented-reality/">virtual reality:</a></strong> Immersive VR experiences indistinguishable from reality.</li>
+            <li><strong>Predictive content creation:</strong> The ability to predict audience preferences could generate more enjoyable content for viewers.</li>
+            <li><strong>Interactive storytelling:</strong> Viewers choose aspects of a story to explore, with AI generating content in real time.</li>
+            <li><strong>Emotionally responsive soundtracks:</strong> Music, <a href="https://developer.nvidia.com/rtx/path-tracing">lighting</a> and sound effects in films and games could be altered depending on the audience’s emotional state.</li>
+            <li><strong>AI scriptwriters:</strong> Enhanced NLP models could suggest outlines, structures and dialogue, or complete scenes based on the established tone and style.</li>
+            <li><strong>Personalized gaming challenges:</strong> Games that adapt to the skill level and preferences of the player, with challenges suited to their abilities.</li>
+            <li><strong>Character AI Deep Learning:</strong> Game characters could learn and evolve through player interaction.</li>
+            <li><strong>Procedural content generation:</strong> Infinite landscapes, levels or story arcs could make games and movies endlessly unique.</li>
+            <li><strong>AI-assisted animation:</strong> It could generate in-between frames or suggest new character animations.</li>
+            <li><strong>Voice synthesis:</strong> It could replicate voices, allowing for more diverse character dialogues without requiring extensive voice actor libraries.</li>
+            <li><strong>Facial expression and gesture AI:</strong> Enhanced recognition and replication of human expressions and gestures in characters to improve realism.</li>
+            <li><strong>Automated testing and debugging:</strong> Streamlining the testing phase of game development, identifying bugs and balancing issues more efficiently.</li>
+            <li><strong>AI in casting:</strong> Analyzing actor performances and predicting on-screen chemistry.</li>
+            <li><strong>Narrative exploration tools:</strong> Letting users explore alternative storylines or background details.</li>
+            <li><strong>Multi-sensory experiences:</strong> Beyond sight and sound, future AI may be able to stimulate other senses to enhance the immersive experience.</li>
+            <li><strong>Digital humans:</strong> Digital actors changing the dynamics of celebrity and performance.</li>
+            <li><strong>Learning from Viewers:</strong> Improving storytelling techniques or game mechanics by analyzing user interactions.</li>
+            <li><strong>Automated content moderation:</strong> Moderating user-generated content to maintain community standards.</li>
+            <li><strong>Virtual production assistants:</strong> Handling various aspects of production logistics, from scheduling to budget management.</li>
+            <li><strong>Enhanced localization:</strong> Content localization that can apply cultural nuance and slang when translating into other languages.</li>
+            <li><strong>User-generated content curation:</strong> Curating and enhancing user-generated content in games.</li>
+            <li><strong>Immersive educational content:</strong> Interactive educational content that adapts to the learning pace of the user.</li>
+            <li><strong>AI game masters:</strong> In RPG games, AI could play the game master, creating quests and storylines on the fly.</li>
+            <li><strong>Accessibility enhancements:</strong> Improving accessibility in games and movies via adjustments tailored for people with disabilities.</li>
+        
+        </ul>
+        </div>
+      
+    
+    </article>
+    
 </body>
 </html>
