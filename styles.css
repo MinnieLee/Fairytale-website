@@ -168,7 +168,7 @@ body {
     z-index: 12; /* Bring hovered image to the front */
   }
   /* Dim other images on hover */
-  .image-container:hover ~ .image-container img {
-    /* opacity: 0.2; */
-  }
+  /* .image-container:hover ~ .image-container img {
+    opacity: 0.2; 
+  } */
   
