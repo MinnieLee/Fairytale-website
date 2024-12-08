@@ -101,3 +101,62 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+    const pageSequence = [
+        "Cd.html",
+        "Cd2.html",
+        "Cd3.html",
+        "Cd4.html",
+        "Cd5.html"
+    ];
+
+    const currentPage = window.location.pathname.split("/").pop();
+    let currentIndex = pageSequence.indexOf(currentPage);
+
+    if (currentIndex === -1) {
+        console.error("Current page is not found in the sequence:", currentPage);
+        return;
+    }
+
+    const menuButton = document.querySelector('.section-one .menu-button');
+    const nextButton = document.querySelector('.section-three .next-button');
+    const backButton = document.querySelector('.section-three .circle-button.top-left');
+
+    if (!menuButton || !nextButton || !backButton) {
+        console.error("One or more buttons are not found in the DOM.");
+        return;
+    }
+
+    // Menu Button Functionality
+    menuButton.addEventListener('click', () => {
+        const menuList = document.getElementById('menu-list');
+        if (menuList) {
+            menuList.style.display = 'flex'; // Show the menu
+        } else {
+            console.error("Menu list not found in the DOM.");
+        }
+    });
+
+    // Back Button Functionality
+    backButton.addEventListener('click', () => {
+        if (currentIndex > 0) {
+            currentIndex--;
+            console.log("Navigating to:", pageSequence[currentIndex]);
+            window.location.href = pageSequence[currentIndex];
+        }
+    });
+
+    // Next Button Functionality
+    nextButton.addEventListener('click', () => {
+        if (currentIndex < pageSequence.length - 1) {
+            currentIndex++;
+            console.log("Navigating to:", pageSequence[currentIndex]);
+            window.location.href = pageSequence[currentIndex];
+        }
+    });
+});
+
+
+
+
+
