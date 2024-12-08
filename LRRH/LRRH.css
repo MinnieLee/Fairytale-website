@@ -241,6 +241,27 @@ section {
     justify-content: center;
 }
 
+.circle-button.topp-right:hover {
+    background-color: #fd6565;
+}
+
+.circle-button.topp-right {
+    position: absolute;
+    top: 1px;
+    right: 10px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #f73e3e;
+    color: white;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .circle-button.top-right:hover {
     background-color: #fd6565;
 }
