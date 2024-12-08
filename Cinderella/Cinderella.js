@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Trigger image change when scrolled to the end
         if (!notificationChanged && scrollTop + clientHeight >= scrollHeight - 10) {
-            quizButton.src = 'Cdd2.png'; // Change the image
+            quizButton.src = 'cddd2.png'; // Change the image
             notificationChanged = true;
         }
     });
