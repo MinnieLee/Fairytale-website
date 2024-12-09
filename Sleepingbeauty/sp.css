@@ -124,7 +124,7 @@ body {
 .subtitle h3 {
     font-family: "Lora";
     font-size: 18px;
-    color: #eb6a84;
+    color: #ef639b;
     margin-bottom: 5px;
 }
 
@@ -367,15 +367,15 @@ section {
 }
 
 .png-button {
-    width: 80px;
-    height: 80px;
+    width: 70px;
+    height: 70px;
     cursor: pointer;
     transition: transform 0.3s ease;
 }
 
 .memo-button{
-    width: 85px;
-    height: 85px;
+    width: 75px;
+    height: 75px;
     cursor: pointer;
     transition: transform 0.3s ease; 
 }
