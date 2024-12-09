@@ -64,7 +64,7 @@ function selectAnswer(e) {
 }
 
 function returnToHome() {
-    window.location.href = 'LRRH.html' // Redirect to the "Little Red Riding Hood" page
+    window.location.href = 'LRRH.html' //Back to the "Little Red Riding Hood" mainpage
 }
 
 function setStatusClass(element, correct) {

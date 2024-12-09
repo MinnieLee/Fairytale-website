@@ -5,7 +5,7 @@
 }
 
 body {
-    font-family: "Inter";
+    font-family: "Lora";
     background-color: #ffffff;
 }
 
@@ -122,7 +122,7 @@ body {
 }
 
 .subtitle h3 {
-    font-family: Source Sans Variable;
+    font-family: "Lora";
     font-size: 18px;
     color: #e27138;
     margin-bottom: 5px;
@@ -130,7 +130,8 @@ body {
 
 
 .subtitle p {
-    font-size: 16px;
+    font-size: 15px;
+    font-family: "Lora";
     font-weight: 450;
     color: rgb(65, 65, 74);
     text-align: left;
@@ -140,6 +141,7 @@ body {
     padding: 0;
     /* Remove extra padding */
     background-color: #f73e3e;
+    font-family: "Lora";
     color: white;
     margin-bottom: 10px;
     border-radius: 28px;
@@ -195,11 +197,16 @@ article {
 }
 
 h2 {
-    font-size: 25px;
+    font-size: 20px;
     margin-bottom: 10px;
     color: black;
 
 }
+
+h3 {
+    font-family: "Lora";
+}
+
 
 /* Section styling */
 section {
@@ -222,28 +229,11 @@ section {
 
 .section-one h2 {
     margin: 0;
+    font-size: 21px;
+    font-weight: 650;
+    
 }
 
-.circle-button.top-right {
-    position: absolute;
-    top: 1px;
-    right: 10px;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background-color: #f73e3e;
-    color: white;
-    border: none;
-    font-size: 16px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.circle-button.topp-right:hover {
-    background-color: #fd6565;
-}
 
 .circle-button.topp-right {
     position: absolute;
@@ -282,7 +272,7 @@ section {
 }
 
 .center-text {
-    font-size: 20px;
+    font-size: 18px;
     text-align: center;
     color: #333;
 }
@@ -323,8 +313,10 @@ section {
 }
 
 .middle-title {
-    font-size: 20px;
+    font-size: 21px;
     margin-bottom: 10px;
+    font-weight: 670;
+ 
 }
 
 /* .readings p {
@@ -341,7 +333,9 @@ section {
     background-color: #f73e3e;
     color: white;
     border: none;
+    font-family: "Nunito Sans", sans-serif;
     font-size: 16px;
+    font-weight: 500;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -399,11 +393,14 @@ section {
 }
 
 .section-readings p {
+    font-family: "Fanwood Text", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
     margin-top: 5px;
     margin-bottom: 10px;
-    font-size: 16px;
     color: #555;
-    line-height: 1.6;
+    line-height: 1.4;
 }
 
 /* Stick to their positions */
@@ -420,7 +417,8 @@ section {
     width: 100%;
     height: 150px;
     margin-bottom: 20px;
-    font-size: 16px;
+    font-size: 20px;
+    font-family: "Fanwood Text", serif;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -484,3 +482,4 @@ section {
 .list button:hover {
     background-color: #fd6565;
 }
+
