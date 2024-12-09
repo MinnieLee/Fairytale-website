@@ -21,7 +21,7 @@ body {
 
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 780px) {
     .containerr {
         grid-template-columns: 1fr;
     }
@@ -216,6 +216,7 @@ section {
     /* align-items: center; */
     justify-content: space-between;
     background-color: #f9f5f2;
+    margin: 15px, 0;
     border-bottom: 2px solid #f7ab74;
 }
 
@@ -290,12 +291,15 @@ section {
     text-align: center;
     position: sticky;
     z-index: 1;
+    margin-top: 20px; /* Space from Section 2 */
+    margin-bottom: 20px; /* Space to Section Readings */
+    padding: 10px 0;
 }
 
 .readings {
     background-color: #f9f5f2;
     position: relative;
-    margin-top: 40px;
+    margin-top: 20px;
     padding: 10px;
     border-radius: 0px;
     display: flex;
@@ -378,6 +382,13 @@ section {
     transition: transform 0.3s ease;
 }
 
+.memo-button{
+    width: 75px;
+    height: 75px;
+    cursor: pointer;
+    transition: transform 0.3s ease; 
+}
+
 .png-button:hover {
     transform: scale(1.1);
 }
@@ -386,7 +397,9 @@ section {
 .section-readings {
     flex: 1;
     overflow-y: auto;
-    padding: 20px;
+    padding-top: 10px;
+    padding-left: 17px;
+    padding-right: 17px;
     /* Better readability */
     background-color: #f9f5f2;
     margin-top: 0;
@@ -397,7 +410,7 @@ section {
     font-weight: 400;
     font-style: normal;
     font-size: 18px;
-    margin-top: 5px;
+    margin-top: 0px;
     margin-bottom: 10px;
     color: #555;
     line-height: 1.4;
@@ -482,4 +495,49 @@ section {
 .list button:hover {
     background-color: #fd6565;
 }
+
+/* Add media query for responsive scaling */
+@media only screen and (max-width: 800px) {
+    .circle-button {
+        width: 40px;
+        height: 40px;
+        font-size: 14px; /* Adjust font size */
+    }
+
+    .png-button {
+        width: 40px;
+        height: 40px;
+    }
+
+    .memo-button {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .circle-button {
+        width: 35px;
+        height: 35px;
+        font-size: 13px; /* Further adjustment for smaller screens */
+    }
+
+    .png-button {
+        width: 40px;
+        height: 40px;
+    }
+
+    .memo-button {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    section {
+        margin: 15px 0; 
+    }
+
+}
+
 

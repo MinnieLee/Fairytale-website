@@ -367,6 +367,13 @@ section {
     transform: scale(1.1);
 }
 
+.memo-button{
+    width: 75px;
+    height: 75px;
+    cursor: pointer;
+    transition: transform 0.3s ease; 
+}
+
 /* Scrollable Reading*/
 .section-readings {
     flex: 1;
