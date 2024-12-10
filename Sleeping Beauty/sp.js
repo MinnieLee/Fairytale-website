@@ -103,11 +103,11 @@
    
    document.addEventListener('DOMContentLoaded', () => {
        const pageSequence = [
-           "LRRH.html",
-           "LRRH2.html",
-           "LRRH3.html",
-           "LRRH4.html",
-           "LRRH5.html"
+           "sp.html",
+           "sp2.html",
+           "sp3.html",
+           "sp4.html",
+           "sp5.html"
        ];
    
        const currentPage = window.location.pathname.split("/").pop();
