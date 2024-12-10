@@ -17,16 +17,21 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
   }
   .image-collage:hover .image-container {
     filter: brightness(50%);
   }
+
   
   .image-container {
+    width: 15%; 
+    max-width: 300px; 
     position: absolute;
     transition: transform 0.3s ease, opacity 0.3s ease;
   }
-  
+
+
   /* Individual sizes and positions for each PNG */
   .image-container:nth-child(1) {
     top: 10%;
@@ -140,6 +145,7 @@ body {
   
 /* Initial style for PNG (no box-shadow, no container) */
 .image-container img {
+    width: 100%; 
     height: auto;
     border-radius: 10px;
     transition: all 0.3s ease;
@@ -174,3 +180,22 @@ body {
     opacity: 0.2; 
   } */
   
+  @media (max-width: 768px) {
+    .image-container {
+        width: 15%; /* Adjust size for smaller screens */
+    }
+
+    .image-container img{
+      width: 15%; /* Adjust size for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+    .image-container {
+        width: 15% /* Adjust size for very small screens */
+    }
+
+    .image-container img {
+      width: 15% /* Adjust size for very small screens */
+  }
+}
