@@ -46,31 +46,6 @@
         }
     });
 
-    
-
-    // // Scrolling Effect-change the png file/notification
-    // const readingsSection = document.querySelector('.section-readings');
-    // const notificationImage = document.querySelector('.section-four img[alt="3"]'); // Select the correct image based on its alt attribute
-
-    // let notificationChanged = false; // To track if the image is changed
-
-    // // Change the notification image when the end of the readings section is reached
-    // readingsSection.addEventListener('scroll', () => {
-    //     const scrollPosition = readingsSection.scrollTop + readingsSection.clientHeight;
-    //     const scrollHeight = readingsSection.scrollHeight;
-
-    //     if (scrollPosition >= scrollHeight && !notificationChanged) {
-    //         notificationImage.src = "Notification-one.png"; // Change the image
-    //         notificationChanged = true; // Ensure the change happens only once
-    //     }
-    // });
-
-    // // Display "Take a Quiz!" on clicking the changed notification image
-    // notificationImage.addEventListener('click', () => {
-    //     if (notificationChanged) {
-    //         alert("Take a Quiz!");
-    //     }
-    // });
 
     
     document.addEventListener('DOMContentLoaded', () => {

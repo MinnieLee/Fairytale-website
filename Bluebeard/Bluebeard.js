@@ -46,6 +46,7 @@
        }
    });
 
+
    
    document.addEventListener('DOMContentLoaded', () => {
        // Select relevant elements
@@ -62,7 +63,7 @@
    
            // Trigger image change when scrolled to the end
            if (!notificationChanged && scrollTop + clientHeight >= scrollHeight - 10) {
-               quizButton.src = 'notificationtwo.png'; // Change the image
+               quizButton.src = 'Notification-one.png'; // Change the image
                notificationChanged = true;
            }
        });
@@ -153,6 +154,10 @@
            }
        });
    });
+   
+   
+   
+   
    
    
    
