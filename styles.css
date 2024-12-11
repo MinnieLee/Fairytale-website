@@ -196,6 +196,6 @@ body {
     }
 
     .image-container img {
-      width: 15% /* Adjust size for very small screens */
+      width: 15% !important /* Adjust size for very small screens */
   }
 }
