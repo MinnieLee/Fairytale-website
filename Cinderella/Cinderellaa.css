@@ -288,7 +288,7 @@ section {
     position: sticky;
     top: 115px;
     z-index: 1;
-    margin-top: 20px; /* Space from Section 2 */
+    margin-top: 15px; /* Space from Section 2 */
     margin-bottom: 20px; /* Space to Section Readings */
     padding: 10px 0;
 }
@@ -487,6 +487,20 @@ section {
     background-color: #4286bd;
 }
 
+@media only screen and (max-width: 1200px) {
+    .middle-title {
+        font-size: 15px;
+        margin-bottom: 10px;
+        font-weight: 570;
+    }
+
+    .circle-button {
+        width: 35px;
+        height: 35px;
+        font-size: 12px; /* Adjust font size */
+    }
+}
+
 /* Add media query for responsive scaling */
 @media only screen and (max-width: 800px) {
     .circle-button {
@@ -506,14 +520,14 @@ section {
     }
 
     .middle-title {
-        font-size: 20px;
+        font-size: 18px;
         margin-bottom: 10px;
         font-weight: 570;
      
     }
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 560px) {
     .circle-button {
         width: 35px;
         height: 35px;
@@ -530,11 +544,7 @@ section {
         height: 50px;
     }
 
-    .middle-title {
-        font-size: 16px;
-        margin-bottom: 10px;
-        font-weight: 600;
-    }
+  
 }
 
 @media only screen and (max-width: 800px) {
