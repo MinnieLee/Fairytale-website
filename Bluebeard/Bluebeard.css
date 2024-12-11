@@ -287,6 +287,7 @@ section {
     align-items: center;
     text-align: center;
     position: sticky;
+    top: 115px;
     z-index: 1;
     margin-top: 20px; /* Space from Section 2 */
     margin-bottom: 20px; /* Space to Section Readings */
