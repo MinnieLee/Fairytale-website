@@ -522,7 +522,7 @@ section {
     }
 
     .middle-title {
-        font-size: 15px;
+        font-size: 18px;
         margin-bottom: 10px;
         font-weight: 570;
      
@@ -549,12 +549,7 @@ section {
         height: 50px;
     }
 
-    .middle-title {
-        font-size: 14px;
-        margin-bottom: 10px;
-        font-weight: 600;
-     
-    }
+  
 }
 
 @media only screen and (max-width: 800px) {
