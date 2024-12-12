@@ -24,12 +24,12 @@ body {
   box-shadow: 0 0.9em 2.8em rgba(86, 66, 0, 0.2);
   display: flex;
   flex-direction: column;
-  align-items: center; /* Centers all children horizontally */
-  justify-content: center; /* Centers all children vertically */
+  align-items: center;
+  justify-content: center; 
 }
   
   .centered {
-    margin-top: 2em; /* Optional spacing for positioning */
+    margin-top: 2em; 
     font-size: 1.3em;
     background-color: #f7ab74;
     color: #ffffff;
@@ -40,14 +40,14 @@ body {
   }
   
   .centered:hover {
-    background-color: #f7ab74; /* Slightly darker shade on hover */
+    background-color: #f7ab74; 
   }
   
   .button-container {
     display: flex;
     justify-content: center;
     gap: 1em;
-    margin-top: 1em; /* Space above buttons */
+    margin-top: 1em;
   }
   
 .game-container {
@@ -143,9 +143,9 @@ button {
 }
 
 .image {
-  width: 80%; /* Adjust percentage as needed for smaller images */
-  height: auto; /* Maintain aspect ratio */
-  object-fit: contain; /* Ensure image fits within bounds */
+  width: 80%; 
+  height: auto; 
+  object-fit: contain; 
 }
 
 #home {
@@ -162,7 +162,7 @@ button {
   cursor: pointer;
 }
 #home:hover {
-  background-color: #f77c3e /* Slightly darker shade on hover */
+  background-color: #f77c3e 
 }
 
 #stop:hover{
@@ -171,9 +171,9 @@ button {
 
 .button-container {
   display: flex;
-  justify-content: center; /* Center both buttons horizontally */
-  gap: 1em; /* Add space between the buttons */
-  margin-top: 1em; /* Add spacing above the buttons */
+  justify-content: center; 
+  gap: 1em;
+  margin-top: 1em; 
 }
 
 #stop,

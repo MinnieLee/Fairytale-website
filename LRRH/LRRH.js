@@ -3,20 +3,20 @@
     const menuList = document.getElementById('menu-list');
     const menuButton = document.querySelector('.circle-button.top-right');
 
-    // Open the menu list
+    // Open the menu 
     menuButton.addEventListener('click', () => {
-        menuList.style.display = 'flex'; // Show the list
+        menuList.style.display = 'flex';
     });
 
-    // Close the menu list 
+    // Close the menu
     menuList.querySelector('.close-button').addEventListener('click', () => {
-        menuList.style.display = 'none'; // Hide the list
+        menuList.style.display = 'none'; 
     });
 
-    // Close the menu list-outside 
+    // Close the menu from list-outside 
     window.addEventListener('click', (e) => {
         if (e.target === menuList) {
-            menuList.style.display = 'none'; // Hide the list
+            menuList.style.display = 'none'; 
         }
     });
 
@@ -49,29 +49,26 @@
 
     
     document.addEventListener('DOMContentLoaded', () => {
-        // Select relevant elements
         const readingsSection = document.querySelector('.section-readings');
         const quizButton = document.querySelector('.section-four img[alt="3"]');
     
-        let notificationChanged = false; // To track if the image is changed
+        let notificationChanged = false; 
     
-        // Add scroll listener to the readings section
+  
         readingsSection.addEventListener('scroll', () => {
             const scrollHeight = readingsSection.scrollHeight;
             const scrollTop = readingsSection.scrollTop;
             const clientHeight = readingsSection.clientHeight;
     
-            // Trigger image change when scrolled to the end
+         
             if (!notificationChanged && scrollTop + clientHeight >= scrollHeight - 10) {
-                quizButton.src = 'Notification-one.png'; // Change the image
+                quizButton.src = 'Notification-one.png'; // Change the png
                 notificationChanged = true;
             }
         });
     
-        // Add click event to the quizButton for displaying the notification
         quizButton.addEventListener('click', () => {
             if (notificationChanged) {
-                // Create and style the notification text dynamically
                 const notificationText = document.createElement('div');
                 notificationText.textContent = 'Take a Quiz!';
                 Object.assign(notificationText.style, {
@@ -89,10 +86,8 @@
                     textAlign: 'center',
                 });
     
-                // Append the notification text to the document body
                 document.body.appendChild(notificationText);
     
-                // Remove the notification after 3 seconds
                 setTimeout(() => {
                     document.body.removeChild(notificationText);
                 }, 3000);
@@ -126,17 +121,17 @@
             return;
         }
     
-        // Menu Button Functionality
+        // Menu Button
         menuButton.addEventListener('click', () => {
             const menuList = document.getElementById('menu-list');
             if (menuList) {
-                menuList.style.display = 'flex'; // Show the menu
+                menuList.style.display = 'flex'; 
             } else {
                 console.error("Menu list not found in the DOM.");
             }
         });
     
-        // Back Button Functionality
+        // Back Button
         backButton.addEventListener('click', () => {
             if (currentIndex > 0) {
                 currentIndex--;
@@ -145,7 +140,7 @@
             }
         });
     
-        // Next Button Functionality
+        // Next Button
         nextButton.addEventListener('click', () => {
             if (currentIndex < pageSequence.length - 1) {
                 currentIndex++;
