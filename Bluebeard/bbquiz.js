@@ -64,7 +64,7 @@ function selectAnswer(e) {
 }
 
 function returnToHome() {
-    window.location.href = 'Bluebeard.html' //Back to the "Little Red Riding Hood" mainpage
+    window.location.href = 'Bluebeard.html' 
 }
 
 function setStatusClass(element, correct) {
