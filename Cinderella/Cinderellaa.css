@@ -68,10 +68,8 @@ body {
     border: 2px solid #65a8bb;
     transition: background-color 0.3s, height 0.3s;
     display: flex;
-    /* Use flexbox for alignment */
     align-items: center;
     justify-content: space-between;
-    /* Space between the box and the text */
     height: 100px;
 }
 
@@ -79,9 +77,7 @@ body {
     padding: 25px;
     height: 120px;
     border: 2px solid #4286bd;
-    /* Add a red border on hover */
     box-sizing: border-box;
-    /* Ensure the border doesn't affect layout */
 }
 
 .subtitle .content {
@@ -91,34 +87,22 @@ body {
 
 .subtitle .square-box {
     width: 100px;
-    /* Fixed size for the square box */
     height: 100px;
-    /* Match the aspect ratio or preferred size */
     background-color: rgba(255, 255, 255, 0);
-    /* No background color */
     border-radius: 15px;
-    /* Optional rounded corners */
     flex-shrink: 0;
-    /* Prevent resizing */
     margin-left: 0px;
     overflow: hidden;
-    /* Prevent image overflow */
     display: flex;
-    /* Flexbox for centering */
     align-items: center;
-    /* Center image vertically */
     justify-content: center;
-    /* Center image horizontally */
 }
 
 
 .subtitle .square-box img {
     max-width: 80%;
-    /* Ensure the image doesn't exceed the box's width */
     max-height: 80%;
-    /* Ensure the image doesn't exceed the box's height */
     object-fit: contain;
-    /* Scale the image to fit within the box while maintaining aspect ratio */
     margin-left: 0%;
 }
 
@@ -140,7 +124,6 @@ body {
 
 .subtitlequiz {
     padding: 0;
-    /* Remove extra padding */
     background-color: #4286bd;
     font-family: "Lora";
     color: white;
@@ -148,38 +131,25 @@ body {
     border-radius: 28px;
     text-decoration: none;
     display: flex;
-    /* Flexbox for alignment */
     align-items: center;
-    /* Vertical centering */
     justify-content: center;
-    /* Horizontal centering */
     height: 70px;
-    /* Keep the height */
     font-size: 24px;
-    /* Adjust font size for better visibility */
     font-weight: bold;
-    /* Emphasize the text */
     text-transform: uppercase;
-    /* Ensure all letters are uppercase */
 }
 
 .subtitlequiz:hover {
     border: 2px solid #000000;
-    /* Add a red border on hover */
     box-sizing: border-box;
-    /* Ensure the border doesn't affect layout */
 }
 
-
-
-/* General styling for the article sections */
 
 article {
     display: flex;
     background-color: rgb(250, 251, 254);
     flex-direction: column;
     gap: 0px;
-    /* Reduced gap between sections */
     padding: 20px;
     border-radius: 20px;
     /* padding: 15px; */
@@ -288,8 +258,8 @@ section {
     position: sticky;
     top: 115px;
     z-index: 1;
-    margin-top: 15px; /* Space from Section 2 */
-    margin-bottom: 20px; /* Space to Section Readings */
+    margin-top: 15px; 
+    margin-bottom: 20px; 
     padding: 10px 0;
 }
 
@@ -391,7 +361,6 @@ section {
     padding-top: 10px;
     padding-left: 17px;
     padding-right: 17px;
-    /* Better readability */
     background-color: rgb(250, 251, 254);
     margin-top: 0;
 }
@@ -407,7 +376,6 @@ section {
     line-height: 1.4;
 }
 
-/* Stick to their positions */
 .section-one,
 .section-two,
 .section-three,
@@ -497,16 +465,15 @@ section {
     .circle-button {
         width: 35px;
         height: 35px;
-        font-size: 12px; /* Adjust font size */
+        font-size: 12px; 
     }
 }
 
-/* Add media query for responsive scaling */
 @media only screen and (max-width: 800px) {
     .circle-button {
         width: 40px;
         height: 40px;
-        font-size: 14px; /* Adjust font size */
+        font-size: 14px; 
     }
 
     .png-button {
@@ -531,7 +498,7 @@ section {
     .circle-button {
         width: 35px;
         height: 35px;
-        font-size: 13px; /* Further adjustment for smaller screens */
+        font-size: 13px;
     }
 
     .png-button {
