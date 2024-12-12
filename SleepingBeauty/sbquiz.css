@@ -18,7 +18,7 @@
     height: 100vh;
     justify-content: center;
     align-items: center;
-    background-color: #fff5f8; /* Light neutral background */
+    background-color: #fff5f8; 
   }
   
   body.correct {
@@ -32,10 +32,10 @@
   .container {
     width: 800px;
     max-width: 80%;
-    background-color: white; /* White for the container */
+    background-color: white; 
     border-radius: 5px;
     padding: 10px;
-    box-shadow: 0 0 10px 2px #f45e7c; /* Light orange for shadow */
+    box-shadow: 0 0 10px 2px #f45e7c; 
   }
   
   .btn-grid {
@@ -48,37 +48,37 @@
   .btn {
     --hue: var(--hue-neutral);
     border: 1px solid black;
-    background-color: #f45e7c; /* Light orange for buttons */
+    background-color: #f45e7c; 
     border-radius: 5px;
     padding: 5px 10px;
-    color: white; /* White text */
+    color: white; 
     outline: none;
   }
   
   .btn:hover {
-    border-color: #f2486a;; /* Darker orange for hover effect */
+    border-color: #f2486a;; 
   }
   
   .btn.correct {
     --hue: var(--hue-correct);
-    background-color: #6dff92; /* Green background */
+    background-color: #6dff92; 
     border-color: #6dff92;
-    color: white; /* White text for contrast */
+    color: white; 
   }
   
   .btn.wrong {
     --hue: var(--hue-wrong);
-    background-color: #ff4570; /* Red background */
+    background-color: #ff4570; 
     border-color: #ff4570;
-    color: white; /* White text for contrast */
+    color: white; 
   }
   
   .start-btn, .next-btn {
     font-size: 1.5rem;
     font-weight: bold;
     padding: 10px 20px;
-    background-color: #f45e7c; /* Light orange for start/next buttons */
-    color: white; /* White text */
+    background-color: #f45e7c; 
+    color: white; 
   }
   
   .controls {

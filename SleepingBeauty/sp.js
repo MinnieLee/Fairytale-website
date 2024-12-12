@@ -5,12 +5,12 @@
 
    // Open the menu list
    menuButton.addEventListener('click', () => {
-       menuList.style.display = 'flex'; // Show the list
+       menuList.style.display = 'flex'; 
    });
 
    // Close the menu list 
    menuList.querySelector('.close-button').addEventListener('click', () => {
-       menuList.style.display = 'none'; // Hide the list
+       menuList.style.display = 'none'; 
    });
 
    // Close the menu list-outside 
@@ -50,29 +50,24 @@
 
    
    document.addEventListener('DOMContentLoaded', () => {
-       // Select relevant elements
        const readingsSection = document.querySelector('.section-readings');
        const quizButton = document.querySelector('.section-four img[alt="3"]');
    
-       let notificationChanged = false; // To track if the image is changed
+       let notificationChanged = false; 
    
-       // Add scroll listener to the readings section
        readingsSection.addEventListener('scroll', () => {
            const scrollHeight = readingsSection.scrollHeight;
            const scrollTop = readingsSection.scrollTop;
            const clientHeight = readingsSection.clientHeight;
    
-           // Trigger image change when scrolled to the end
            if (!notificationChanged && scrollTop + clientHeight >= scrollHeight - 10) {
-               quizButton.src = 'notificationn.png'; // Change the image
+               quizButton.src = 'notificationn.png';
                notificationChanged = true;
            }
        });
    
-       // Add click event to the quizButton for displaying the notification
        quizButton.addEventListener('click', () => {
            if (notificationChanged) {
-               // Create and style the notification text dynamically
                const notificationText = document.createElement('div');
                notificationText.textContent = 'Take a Quiz!';
                Object.assign(notificationText.style, {
@@ -89,11 +84,9 @@
                    fontWeight: 'bold',
                    textAlign: 'center',
                });
-   
-               // Append the notification text to the document body
+
                document.body.appendChild(notificationText);
    
-               // Remove the notification after 3 seconds
                setTimeout(() => {
                    document.body.removeChild(notificationText);
                }, 3000);
@@ -127,7 +120,7 @@
            return;
        }
    
-       // Menu Button Functionality
+       // Menu Button Function
        menuButton.addEventListener('click', () => {
            const menuList = document.getElementById('menu-list');
            if (menuList) {
@@ -137,7 +130,7 @@
            }
        });
    
-       // Back Button Functionality
+       // Back Button Function
        backButton.addEventListener('click', () => {
            if (currentIndex > 0) {
                currentIndex--;
@@ -146,7 +139,7 @@
            }
        });
    
-       // Next Button Functionality
+       // Next Button Function
        nextButton.addEventListener('click', () => {
            if (currentIndex < pageSequence.length - 1) {
                currentIndex++;
